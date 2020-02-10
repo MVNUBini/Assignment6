@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h1>Bible Search Input Form</h1>
+<FORM action="https://cs.mvnu.edu/class/csc3004/rkasper/cgi-bin/bibleServer.cgi"
+      method="post">
+<h3>Select which type of search you would like to perform:</h3>
+<TABLE>
+<TR>
+<!--
+	RADIO buttons allow the user to choose only one item. 
+	The value returned to the CGI script for a given NAME (in this case, search_type)
+		is given by the VALUE parameter. In the first choice, the string "reference" 
+		(without the double quotes) is returned as the parameter.
+-->
+<TD ALIGN=RIGHT VALIGN=TOP><INPUT NAME="search_type" TYPE="radio" VALUE="reference"></TD>
+<TD ALIGN=LEFT VALIGN=TOP>Verse Lookup By <I>Reference</I></TD>
+
+<TD ALIGN=RIGHT VALIGN=TOP><INPUT NAME="search_type" TYPE="radio" VALUE="keyword"></TD>
+<TD ALIGN=LEFT VALIGN=TOP>Verse Lookup By <I>Keyword</I></TD>
+
+<TD ALIGN=RIGHT VALIGN=TOP><INPUT NAME="search_type" TYPE="radio" VALUE="vines"></TD>
+<TD ALIGN=LEFT VALIGN=TOP><I>Vines</I> Topical Dictionary</TD>
+</TR>
+</TABLE>
+<HR>
+<TABLE>
+<TR>
+<TD ALIGN=RIGHT VALIGN=TOP>Book</TD>
+<TD ALIGN=LEFT VALIGN=TOP><INPUT NAME="book" TYPE="text" MAXLENGTH=3></TD>
+</TR>
+<TR>
+<TD ALIGN=RIGHT VALIGN=TOP>Chapter</TD>
+<TD ALIGN=LEFT VALIGN=TOP><INPUT NAME="chapter" TYPE="text" MAXLENGTH=3></TD>
+</TR>
+<TR>
+<TD ALIGN=RIGHT VALIGN=TOP>Verse</TD>
+<TD ALIGN=LEFT VALIGN=TOP><INPUT NAME="verse" TYPE="text" MAXLENGTH=3></TD>
+</TR>
+</TABLE>
+
+<!-- SUBMIT and RESET buttons to send the data, or reset it to the initial state. -->
+<TABLE ALIGN=CENTER>
+<TR>
+<TD ALIGN=RIGHT VALIGN=TOP><INPUT TYPE="submit" VALUE="Submit"></TD>
+<TD ALIGN=LEFT VALIGN=TOP><INPUT TYPE="reset" VALUE="Reset"></TD>
+</TR>
+</TABLE>
+</FORM>
+</body>
+</html>
